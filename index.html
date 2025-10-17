@@ -3,29 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portafolio</title>
+  <title>Mi Portafolio - Aldo Amaro</title>
   <link rel="stylesheet" href="resources/css/estilos.css">
 </head>
 <body>
   <header>
-    <h1>Mi Portafolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Proyectos</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>Aldo Amaro</h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="galeria">
-    <article class="proyecto">Proyecto 1</article>
-    <article class="proyecto">Proyecto 2</article>
-    <article class="proyecto">Proyecto 3</article>
+  <main class="container">
+    <section id="inicio">
+      <h2>Bienvenido a mi Portafolio</h2>
+      <p>Aquí encontrarás una selección de mis proyectos más relevantes en el área de redes y telecomunicaciones, así como mi experiencia profesional y formas de contacto.</p>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos Destacados</h2>
+      <div class="galeria">
+        <article class="proyecto">
+          <h3>Diseño e Implementación de Red LAN/WLAN para PYME</h3>
+          <p>Se realizó el diseño completo de la infraestructura de red para una oficina, incluyendo el direccionamiento IP (IPv4), configuración de VLANs para segmentar el tráfico, y la implementación de switches y puntos de acceso inalámbricos (APs) para garantizar una cobertura total y segura.</p>
+        </article>
+        <article class="proyecto">
+          <h3>Configuración de Firewall y VPN Site-to-Site</h3>
+          <p>Implementación de políticas de seguridad en un firewall de próxima generación (NGFW) para proteger la red corporativa. Se configuró una VPN IPsec para conectar de forma segura dos sucursales, permitiendo el intercambio de datos de manera encriptada a través de internet.</p>
+        </article>
+        <article class="proyecto">
+          <h3>Monitoreo de Red con Zabbix</h3>
+          <p>Despliegue de un sistema de monitoreo de red de código abierto (Zabbix) para supervisar el rendimiento y la disponibilidad de servidores y dispositivos de red críticos. Se configuraron alertas automáticas por correo electrónico para notificar fallos en tiempo real.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Si estás interesado en colaborar o quieres saber más sobre mi trabajo, no dudes en escribirme a <a href="mailto:aldo@example.com">aldo@example.com</a>. También puedes encontrarme en mis redes sociales.</p>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 Aldo Amaro</p>
+    <p>© 2025 Aldo Amaro | Desarrollador de Redes y Telecomunicaciones</p>
   </footer>
 </body>
 </html>

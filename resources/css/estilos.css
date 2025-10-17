@@ -1,73 +1,135 @@
+/*
+  COMENTARIO GENERAL:
+  Este CSS combina la estructura solicitada (HEADER, GALERÍA, FOOTER, MEDIA QUERIES)
+  con los estilos visuales de la versión anterior para crear un diseño cohesivo y profesional.
+  Se han ajustado selectores y propiedades para funcionar con el nuevo layout basado en Flexbox.
+*/
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* HEADER */
-  header {
-    background-color: #333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    margin: 0 10px;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* GALERÍA */
-  .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Fondo gris claro para un look suave */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =================================
+   HEADER 
+   ================================= */
+header {
+  background-color: #ffffff; /* Se cambia a blanco para un look más limpio */
+  color: #333; /* Texto oscuro para contraste */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px; /* Más espaciado para que respire */
+  border-bottom: 3px solid #007BFF; /* Borde de acento azul */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para darle profundidad */
+}
+
+header h1 {
+    margin: 0; /* Se quita el margen por defecto del h1 */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 15px; /* Un poco más de separación entre elementos */
+}
+
+nav a {
+  color: #333; /* Texto oscuro que combina con el fondo blanco */
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+nav a:hover {
+    color: #007BFF; /* El color de acento al pasar el cursor */
+}
+
+
+/* =================================
+   CONTENIDO PRINCIPAL
+   ================================= */
+main {
     padding: 20px;
-  }
-  
-  .proyecto {
-    background-color: #f4f4f4;
-    padding: 40px;
-    border-radius: 8px;
-    flex: 1 1 250px;
+}
+
+section {
+    max-width: 1200px;
+    margin: 40px auto; /* Centra las secciones y les da espacio vertical */
+    padding: 20px;
+}
+
+
+/* =================================
+   GALERÍA 
+   ================================= */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.proyecto {
+  background-color: #ffffff; /* Fondo blanco para las tarjetas */
+  padding: 25px;
+  border-radius: 8px;
+  flex: 1 1 300px; /* Base de 300px, crecerán y se encogerán según el espacio */
+  text-align: left; /* Se alinea a la izquierda para mejor legibilidad */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra más definida */
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px); /* Efecto sutil de levantamiento */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.proyecto h3 {
+    margin-top: 0;
+    color: #007BFF; /* Título de la tarjeta con el color de acento */
+}
+
+
+/* =================================
+   FOOTER 
+   ================================= */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px; /* Más padding para un footer más robusto */
+  margin-top: 40px;
+}
+
+/* =================================
+   MEDIA QUERIES (PARA RESPONSIVIDAD)
+   ================================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Apila el logo y la navegación */
     text-align: center;
+    gap: 15px; /* Espacio entre el logo y el nav */
   }
-  
-  /* FOOTER */
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
+
+  nav ul {
+    flex-direction: column; /* Apila los links de navegación */
+    gap: 10px; /* Espacio entre los links */
   }
-  
-  /* MEDIA QUERIES */
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    nav ul {
-      flex-direction: column;
-    }
-  
-    .galeria {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
+
+  /* No es necesario cambiar la dirección de la galería, 
+     ya que 'flex-wrap: wrap' se encarga de apilar los elementos
+     automáticamente cuando no hay espacio suficiente. */
+}
